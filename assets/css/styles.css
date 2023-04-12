@@ -61,6 +61,7 @@ a {
     display: flex;
     align-self: center;
     list-style: none;
+    -webkit-list-style: none;
     gap: 3em;
 }
 
@@ -73,7 +74,9 @@ a {
 .mobile-menu {
     display: none;
     background-color: #a602a0;
-    height: 100%;
+    border-bottom: 0.1em solid white;
+    -webkit-border-bottom: 0.1em solid white;
+    height: 40%;
     width: 100%;
 }
 
@@ -421,7 +424,7 @@ h2 {
 
 	100% {
 		opacity: 1;
-		transform: translateY(0);
+		transform: translateY(-1px);
 	}
 }
 
@@ -438,6 +441,7 @@ h2 {
     }
     .nav-bar {
         padding: 1em;
+        height: 3.3em;
     }
     .logo {
         color: white;
@@ -471,9 +475,9 @@ h2 {
         display: flex;
         flex-direction: column;
         text-align: center;
-        font-size: 2.5em;
-        gap: 1em;
+        font-size: 1.5em;
         margin-top: 1em;
+        gap: 1em;
     }
     .cell {
         display: none;
