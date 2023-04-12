@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Siroti Bank</title>
+    <script src="assets/js/scripts.js"></script>
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <script src="https://kit.fontawesome.com/276f9ca786.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+    <!--NAV-BAR-->
+
+
+    <div class="header">
+        <nav class="nav-bar">
+            <div class="logo">
+                <h1>Siroti<br>BANK</h1>
+            </div>
+            <div class="nav-list">
+                <ul>
+                    <li class="nav-item"><a href="#home" class="nav-link">Início</a></li>
+                    <li class="nav-item"><a href="#cell" class="nav-link">Conta Digital</a></li>
+                    <li class="nav-item"><a href="#vantagens" class="nav-link">Vantagens</a></li>
+                    <li class="nav-item"><a href="#depoimentos" class="nav-link">Depoimentos</a></li>
+                    <li class="nav-item"><a href="#app" class="nav-link">Baixe nosso App</a></li>
+                </ul>
+            </div>
+            <div class="nav-buttom">
+                <button><i class="fa-regular fa-user fa-2x"></i>Acesse Sua Conta</button>
+            </div>
+            <div class="mobile-menu-icon">
+                <button onclick="menuShow()"><img class="icon1" src="assets/images/menu_white_36dp.svg" alt=""></button>
+            </div>
+        </nav>
+        <div class="mobile-menu">
+            <ul>
+                <li class="nav-item"><a onclick="menuHide()" href="#home" class="nav-link">Início</a></li>
+                <li class="nav-item"><a onclick="menuHide()" href="#cell" class="nav-link">Conta Digital</a></li>
+                <li class="nav-item"><a onclick="menuHide()" href="#vantagens" class="nav-link">Vantagens</a></li>
+                <li class="nav-item"><a onclick="menuHide()" href="#depoimentos" class="nav-link">Depoimentos</a></li>
+                <li class="nav-item"><a onclick="menuHide()" href="#app" class="nav-link">Baixe nosso App</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <!--APRESENTAÇÃO-->
+
+    <div class="container">
+        <div id="home" class="text">
+            <h1>SirotiBank</h1>
+            <div class="desc">
+                <h2>Seu banco 100% digital!</h2>
+                <p>Sem anuidade e sem taxas.</p>
+            </div>
+            <div class="conta-button">
+                <button id="crie-button">Abra sua Conta</button>
+            </div>
+        </div>
+        <div class="card-image">
+            <img id="photo2" src="assets/images/card1.png">
+            <img id="photo1" src="assets/images/card2.png">
+        </div>
+    </div>
+
+    <!--CELULAR PHOTO-->
+
+    <div id="cell" class="container reveal">
+        <div class="cell">
+            <div class="icons">
+                <i class="fa-solid fa-dollar-sign fa-3x"></i>
+                <i id="icon2" class="fa-solid fa-hand-holding-dollar fa-3x"></i>
+            </div>
+            <img src="assets/images/iphone.png">
+        </div>
+        <div class="help">
+            <h2>Abra sua conta <span class="color-highlight">agora</span>!</h2>
+            <div class="textos">
+                <p>Baixe nosso aplicativo e crie sua conta, nosso<br>
+                atendimento é on-line e 24h!<br>
+                No nosso banco o cliente é a prioridade!</p>
+                <div class="motivos">
+                    <div class="motivo reveal">
+                        <i class="fa-solid fa-dollar-sign fa-3x"></i>
+                        <div class="texts">
+                            <h3>Aqui seu dinheiro <span class="color-highlight">vale mais</span>!</h3>
+                            <p>No nosso banco, seu dinheiro vale mais!<br>
+                            Somos o banco com maior rendimento em CDI.</p>
+                        </div>
+                    </div>
+                    <div class="motivo reveal">
+                        <i class="fa-regular fa-user fa-3x"></i>
+                        <div class="texts">
+                            <h3>Conta <span class="color-highlight">100% gratuita</span>!</h3>
+                            <p>Transferências, saques, depósitos e pix.<br>
+                            Tudo sem taxas e sem cobranças desnecessárias para você.</p>
+                        </div>
+                    </div>
+                    <div class="motivo reveal">
+                        <i class="fa-solid fa-mobile fa-3x"></i>
+                        <div class="texts">
+                            <h3>Aplicativo <span class="color-highlight">Acessivo</span>!</h3>
+                            <p>Aplicativo dísponivel para Android e IOS!<br>
+                            Feito com carinho para você.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!--VANTAGENS-->
+
+    <div id="vantagens" class="container reveal">
+        <div class="box-vantagens">
+            <h2>Quais as vantagens em ser <span class="color-highlight">Siroti</span>?</h2>
+            <div class="vantagens reveal">
+                <div class="vantagem">
+                    <h3>Internacional</h3>
+                    <i class="fa-solid fa-plane-up fa-3x"></i>
+                    <p>Seu cartão Siroti, é aceito em qualquer lugar do MUNDO!</p>
+                </div>
+
+                <div class="vantagem">
+                    <h3>Anuidade <span style="font-family: 'BancoDoBrasil-Bold'">R$0</span></h3>
+                    <i class="fa-solid fa-dollar-sign fa-3x"></i>
+                    <p>Nosso cartão é completamente sem anuidade e sem cobranças!</p>
+                </div>
+
+                <div class="vantagem">
+                    <h3>Cashback</h3>
+                    <i class="fa-solid fa-rotate-left fa-3x"></i>
+                    <p>Usando SirotiCard, você consegue cashbacks de até 30% em todas as suas compras.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--DEPOIMENTOS-->
+    <div id="depoimentos" class="container reveal">
+        <div class="box-depoimentos">
+            <h2>Quem usa, <span class="color-highlight">fala</span>!</h2>
+            <div class="depoimentos">
+                <div class="depoimento reveal">
+                    <i class="fa-solid fa-user fa-3x"></i>
+                    <h3>Usuário</h3>
+                    <p>"O banco digital Siroti, mudou a minha forma de usar o dinheiro!</p>
+                    <div class="stars">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+                </div>
+                <div class="depoimento reveal">
+                    <i class="fa-solid fa-user fa-3x"></i>
+                    <h3>Usuário</h3>
+                    <p>"Melhor atendimento e experiência que tive com bancos digitais."</p>
+                    <div class="stars">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--BAIXE NOSSO-->
+    <div id="app" class="container reveal">
+        <div class="app reveal">
+            <div class="img-app">
+                <img src="assets/images/iphone1.png">
+                <div class="icon-app">
+                    <img src="assets/images/icon.png">
+                    <img id="icon1" src="assets/images/icon.png">
+                    <img src="assets/images/icon.png">
+                </div>
+            </div>
+            <div class="text">
+                <h2>Baixe <span class="color-highlight">agora</span> mesmo nosso <span class="color-highlight">app</span>!</h2>
+                <p>Disponivel para IOS e ANDROID e gratuito para download!</p>
+                <div class="download-itens">
+                    <div class="download">
+                        <i class="fa-brands fa-google-play fa-3x"></i>
+                        <div class="download-text">
+                            <h3>Baixar via</h3>
+                            <h3>Google Play</h3>
+                        </div>
+                    </div>
+                    <div class="download">
+                        <i class="fa-brands fa-apple fa-3x"></i>
+                        <div class="download-text">
+                            <h3>Baixar via</h3>
+                            <h3>Apple Store</h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <!--FOOTER-->
+
+    <div id="footer">
+        <footer>
+            <p style="color: rgb(0, 0, 0)">Copyright Mateus Teruki©</p>
+            <div class="social-links">
+                <a href="https://api.whatsapp.com/send?phone=5544998400279" target="_blank"><i class="fa-brands fa-whatsapp" style="color: #000000;"></i></a>
+                <a href="https://github.com/terukimateus" target="_blank"><i class="fa-brands fa-github" style="color: #000000;"></i></a>
+                <a href="https://www.instagram.com/terukimateus/" target="_blank"><i class="fa-brands fa-instagram" style="color: #000000;"></i></a>
+            </div>
+        </footer>
+    </div>
+
+</body>
+</html>

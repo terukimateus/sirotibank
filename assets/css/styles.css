@@ -1,0 +1,530 @@
+@font-face {
+    font-family: 'BancoDoBrasil-Bold';
+    src: url(../fonts/BancoDoBrasilRCTextos-XBold.otf);
+}
+
+@font-face {
+    font-family: 'BancoDoBrasil-Light';
+    src: url(../fonts/BancoDoBrasilRCTextos-Light.otf);
+}
+
+@font-face {
+    font-family: 'BancoDoBrasil-Regular';
+    src: url(../fonts/BancoDoBrasilRCTextos-Regular.otf);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'BancoDoBrasil-Light';
+    color: #585858;
+}
+
+a {
+    text-decoration: none;
+    color: #a602a0;
+}
+
+.reveal{
+    position: relative;
+    transform: translateY(-2em);
+    opacity: 0;
+    transition: 1.5s all ease;
+  }
+  
+  .reveal.active{
+    transform: translateX(0);
+    opacity: 1;
+  }
+
+.color-highlight {
+    color: #a602a0;
+    font-family: 'BancoDoBrasil-Bold';
+}
+
+.nav-bar {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2em;
+    padding: 1vw;
+    z-index: 9999;
+}
+
+.nav-list ul {
+    display: flex;
+    align-self: center;
+    list-style: none;
+    gap: 3em;
+}
+
+.nav-list a {
+    color: #585858;
+    font-family: 'BancoDoBrasil-Regular';
+    text-decoration: none;
+}
+
+.mobile-menu {
+    display: none;
+    background-color: #a602a0;
+    height: 100%;
+    width: 100%;
+}
+
+.mobile-menu-icon {
+    display: none;
+}
+
+.nav-buttom button {
+    transition: 1s;
+    cursor: pointer;
+    width: 15em;
+    height: 4em;
+    border: none;
+    border-radius: 2em;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    gap: 0.8em;
+    color: white;
+    font-family: 'BancoDoBrasil-Bold';
+    background-color: #a602a0;
+}
+
+button:hover {
+    color: #a602a0;
+    background-color: white;
+    border: 0.1em solid #a602a0;
+}
+
+.logo {
+    font-family: 'BancoDoBrasil-Bold';
+}
+
+
+.container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding-top: 1em;
+    margin-top: 5em;
+}
+
+.container h1 {
+    color: #a602a0;
+    font-family: 'BancoDoBrasil-Bold';
+}
+
+.conta-button {
+    padding-top: 2em;
+}
+
+.conta-button button {
+    transition: 1s;
+    cursor: pointer;
+    border: none;
+    border-radius: 4em;
+    font-size: 1.5em;
+    width: 9em;
+    height: 2em;
+    color: white;
+    font-family: 'BancoDoBrasil-Bold';
+    background-color: #a602a0;
+}
+
+#crie-button:hover {
+    border: 0.05em solid #a602a0;
+    color: #a602a0;
+    background-color: white;
+}
+
+.container h1 {
+    font-size: 3.5em;
+    font-family: 'BancoDoBrasil-Bold';
+}
+
+.desc {
+    padding-top: 0.5em;
+}
+.desc h2 {
+    color: #a602a0;
+}
+
+.card-image {
+    display: flex;
+}
+
+#photo1 {
+    z-index: 1;
+    animation: myAnim 3s ease 0s infinite alternate forwards;
+    filter: drop-shadow(1px 1px 25px #00000035);
+}
+
+#photo2 {
+    z-index: 1;
+    position: absolute;
+    top: 15em;
+    right: 30vw;
+    animation: myAnim 2.8s ease 0s infinite alternate forwards;
+    filter: drop-shadow(1px 60px 45px #00000029);
+
+}
+
+#cell {
+    z-index: 0;
+    background-color: rgb(249, 249, 249);
+}
+
+
+.cell {
+    padding: 5vw;
+}
+
+.cell img {
+    width: 20em;
+    z-index: 0;
+}
+
+.icons {
+    z-index: 11;
+}
+
+.icons i {
+    position: absolute;
+    animation: myAnimIcon 2.8s ease 0s infinite alternate forwards;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    color: #a602a0;
+    background-color: rgb(255, 255, 255);
+    width: 1.3em;
+    height: 1.3em;
+    -webkit-box-shadow: 0px 0px 57px 1px rgba(0,0,0,0.37);
+    -moz-box-shadow: 0px 0px 57px 1px rgba(0,0,0,0.37);
+    box-shadow: 0px 0px 57px 1px rgba(0,0,0,0.37);
+    border-radius: 0.2em;
+}
+
+#icon2 {
+    margin-left: 16vw;
+    margin-top: 22vw;
+}
+
+.textos {
+    display: flex;
+    padding-top: 0.3em;
+    flex-direction: column;
+    gap: 3em;
+}
+
+h2 {
+    font-family: 'BancoDoBrasil-Bold';
+    font-size: 2em;
+}
+
+.motivos {
+    display: flex;
+    flex-direction: column;
+    gap: 4em;
+}
+
+.motivo {
+    text-align: start;
+    display: flex;
+    align-items: center;
+    gap: 2em;
+}
+
+.motivo i {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    color: #a602a0;
+    background-color: white;
+    width: 1.6em;
+    height: 1.6em;
+    border-radius: 0.2em;
+    -webkit-box-shadow: 0px 0px 57px 1px rgba(0, 0, 0, 0.20);
+    -moz-box-shadow: 0px 0px 57px 1px rgba(0,0,0,0.20);
+    box-shadow: 0px 0px 57px 1px rgba(0,0,0,0.20);
+}
+
+#footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 6em;
+    gap: 5em;
+    background-color: rgb(249, 249, 249);
+}
+
+.social-links {
+    display: flex;
+    justify-items: center;
+    justify-content: center;
+    gap: 1em;
+}
+
+.box-vantagens {
+    text-align: center;
+}
+
+.vantagens {
+    display: flex;
+    padding-top: 2em;
+    gap: 2em;
+}
+.vantagem {
+    transition: 0.5s;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    justify-content: center;
+    padding: 1em;
+    background-color: #a602a0;
+    border-radius: 0.5em;
+    width: 17em;
+    -webkit-box-shadow: 0px 0px 57px 1px rgba(0, 0, 0, 0.20);
+    -moz-box-shadow: 0px 0px 57px 1px rgba(0,0,0,0.20);
+    box-shadow: 0px 0px 57px 1px rgba(0,0,0,0.20);
+}
+
+.vantagem:hover {
+    transform: scale(1.1);
+}
+
+#depoimentos {
+    background-color: rgb(250, 250, 250);
+}
+.box-depoimentos {
+    text-align: center;
+}
+.depoimentos {
+    display: flex;
+    gap: 3em;
+    margin-bottom: 3em;
+}
+
+.depoimento {
+    transition: 0.5s;
+    color: #a602a0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5em;
+    margin-top: 2em;
+    padding: 1em;
+    width: 17em;
+    border-radius: 1em;
+}
+
+.depoimento:hover {
+    transform: scale(1.1);
+}
+
+.app {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 3em;
+}
+.img-app {
+    display: flex;
+    flex-direction: row;
+}
+.img-app img {
+    width: 70%;
+    z-index: 0;
+}
+.icon-app img {
+    position: absolute;
+    z-index: 1;
+    animation: myAnimIcon 2.8s ease 0s infinite alternate forwards;
+    width: 10%;
+    top: 50%;
+    left: 5%;
+    border-radius: 1.8em;
+    -webkit-box-shadow: 0px 0px 57px 1px rgba(0, 0, 0, 0.20);
+    -moz-box-shadow: 0px 0px 57px 1px rgba(0,0,0,0.20);
+    box-shadow: 0px 0px 57px 1px rgba(0,0,0,0.20);
+}
+
+#icon1 {
+    z-index: -1;
+    top: 20%;
+    left: 24%;
+}
+
+.text {
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+    
+}
+
+.download-itens {
+    display: flex;
+    gap: 1em;
+}
+
+
+.download {
+    display: flex;
+    align-items: center;
+    gap: 1em;
+    color: white;
+    background-color: #a602a0;
+    padding: 1em;
+    width: 12.5em;
+    border-radius: 0.2em;
+    transition: 0.8s;
+    cursor: pointer;
+}
+.download:hover {
+    transform: scale(1.1);
+}
+
+@keyframes myAnim {
+	0% {
+		transform: translateY(0);
+	}
+
+	100% {
+		transform: translateY(-100px);
+	}
+}
+
+
+@keyframes myAnimIcon {
+	0% {
+		transform: translateY(10px);
+	}
+
+	100% {
+		transform: translateY(-20px);
+	}
+}
+
+@keyframes navBar {
+	0% {
+		opacity: 0;
+		transform: translateY(-30px);
+	}
+
+	100% {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+
+@media screen and (max-width: 900px) {
+    a {
+        color: white;
+    }
+    .header {
+        background-color: #a602a0;
+        position: fixed;
+        width: 100%;
+        z-index: 99;
+        top: 0;
+    }
+    .nav-bar {
+        padding: 1em;
+    }
+    .logo {
+        color: white;
+    }
+    .card-image {
+        display: none;
+    }
+    .open {
+        display: block;
+        animation: navBar 0.5s ease 0s 1 normal forwards;
+    }
+    .nav-list {
+        display: none;
+    }
+    .nav-buttom {
+        display: none;
+    }
+    .mobile-menu-icon {
+        display: flex;
+    }
+    .mobile-menu {
+        position: fixed;
+    }
+    .mobile-menu-icon button {
+        background-color: transparent;
+        border: none;
+        cursor: pointer;
+    }
+
+    .mobile-menu ul {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        font-size: 2.5em;
+        gap: 1em;
+        margin-top: 1em;
+    }
+    .cell {
+        display: none;
+    }
+    .help {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        justify-content: center;
+    }
+    .motivo {
+        justify-content: center;
+        flex-direction: column;
+        
+    text-align: center;
+    }
+
+    .vantagens {
+        flex-direction: column;
+        align-items: center;
+    }
+    .depoimentos {
+        flex-direction: column;
+    }
+    .app {
+        flex-direction: column;
+    }
+    .img-app {
+        margin-left: 3em;
+        margin-bottom: 1em;
+    }
+    .icon-app {
+        width: 2em;
+    }
+    #icon1 {
+        left: 64%;
+    }
+    .icon-app img {
+        top: 30%;
+        left: 20%;
+    }
+    .download-itens {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+}
+
+@media screen and (max-width: 520px) {
+
+    .container {
+        padding: 2em;
+        text-align: center;
+    }
+}
