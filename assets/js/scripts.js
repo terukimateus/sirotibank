@@ -22,19 +22,42 @@ function reveal() {
 
     function menuShow() {
         let menuMobile = document.querySelector('.mobile-menu')
+        var bars = document.querySelector('#bars')
         
         if (menuMobile.classList.contains('open')) {
           menuMobile.classList.remove('open')
-          document.querySelector('.icon1').src = "assets/images/menu_white_36dp.svg";
+          bars.classList.remove('fa-xmark')
+          bars.classList.add('fa-bars')
         } else {
           menuMobile.classList.add('open')
-          document.querySelector('.icon1').src = "assets/images/close_white_36dp.svg";
+          bars.classList.remove('fa-bars')
+          bars.classList.add('fa-xmark')
         }
       }
     
       function menuHide() {
         let menuMobile = document.querySelector('.mobile-menu')
+        var bars = document.querySelector('#bars')
     
         menuMobile.classList.remove('open')
-        document.querySelector('.icon1').src = "assets/images/menu_white_36dp.svg";
+        bars.classList.remove('fa-xmark')
+        bars.classList.add('fa-bars')
+      }
+
+      ////////////
+
+      function darkMode() {
+        var element = document.body
+        var icon = document.querySelector('#icon')
+        
+        if(element.classList.contains('dark-mode')) {
+          element.classList.remove('dark-mode') 
+          icon.classList.remove('fa-moon')
+          icon.classList.add('fa-moon')
+
+        } else {
+          element.classList.add('dark-mode')
+          icon.classList.remove('fa-moon')
+          icon.classList.add('fa-sun')
+        }
       }

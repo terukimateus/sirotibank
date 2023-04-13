@@ -1,0 +1,589 @@
+@font-face {
+  font-family: "BancoDoBrasil-Bold";
+  src: url(../fonts/BancoDoBrasilRCTextos-XBold.otf);
+}
+@font-face {
+  font-family: "BancoDoBrasil-Light";
+  src: url(../fonts/BancoDoBrasilRCTextos-Light.otf);
+}
+@font-face {
+  font-family: "BancoDoBrasil-Regular";
+  src: url(../fonts/BancoDoBrasilRCTextos-Regular.otf);
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "BancoDoBrasil-Light";
+  background-color: white;
+  color: #585858;
+  transition: 1s;
+}
+
+.dark-mode {
+  transition: 1s;
+  background-color: black;
+  color: white;
+}
+.dark-mode .nav-list a {
+  color: white;
+}
+.dark-mode .nav-buttom button {
+  color: black;
+}
+.dark-mode .nav-buttom button:hover {
+  background-color: black;
+}
+.dark-mode #crie-button {
+  color: black;
+}
+.dark-mode #crie-button:hover {
+  background-color: black;
+}
+.dark-mode #cell {
+  background-color: #171717;
+}
+.dark-mode #depoimentos {
+  background-color: #171717;
+}
+.dark-mode #footer {
+  color: white;
+  background-color: #171717;
+}
+.dark-mode #footer i {
+  color: white;
+}
+.dark-mode .motivos i {
+  background-color: #171717;
+  box-shadow: 0px 0px 57px 1px rgba(255, 255, 255, 0.1);
+}
+.dark-mode .icons i {
+  background-color: black;
+  box-shadow: 0px 0px 57px 1px rgba(255, 255, 255, 0.1);
+}
+.dark-mode .dark-button {
+  color: white;
+}
+
+a {
+  text-decoration: none;
+  color: #a602a0;
+}
+
+.dark-button {
+  font-weight: 900;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.reveal {
+  position: relative;
+  transform: translateY(-2em);
+  opacity: 0;
+  transition: 1.5s all ease;
+}
+
+.reveal.active {
+  transform: translateX(0);
+  opacity: 1;
+}
+
+.color-highlight {
+  color: #a602a0;
+  font-family: "BancoDoBrasil-Bold";
+}
+
+.nav-bar {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2em;
+  padding: 1vw;
+  z-index: 9999;
+}
+
+.nav-list ul {
+  display: flex;
+  align-self: center;
+  list-style: none;
+  -webkit-list-style: none;
+  gap: 3em;
+}
+
+.nav-list a {
+  color: #585858;
+  font-family: "BancoDoBrasil-Regular";
+  text-decoration: none;
+}
+
+.mobile-menu {
+  display: none;
+  background-color: #a602a0;
+  height: 100%;
+  width: 100%;
+}
+
+.mobile-menu-icon {
+  display: none;
+}
+
+.nav-buttom button {
+  transition: 1s;
+  cursor: pointer;
+  width: 15em;
+  height: 4em;
+  border: none;
+  border-radius: 2em;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  gap: 0.8em;
+  color: white;
+  font-family: "BancoDoBrasil-Bold";
+  background-color: #a602a0;
+}
+
+.nav-buttom button:hover {
+  color: #a602a0;
+  background-color: white;
+  border: 0.1em solid #a602a0;
+}
+
+.logo {
+  font-family: "BancoDoBrasil-Bold";
+  color: #a602a0;
+}
+
+.container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding-top: 1em;
+  margin-top: 5em;
+}
+
+.container h1 {
+  color: #a602a0;
+  font-family: "BancoDoBrasil-Bold";
+}
+
+.conta-button {
+  padding-top: 2em;
+}
+
+.conta-button button {
+  transition: 1s;
+  cursor: pointer;
+  border: none;
+  border-radius: 4em;
+  font-size: 1.5em;
+  width: 9em;
+  height: 2em;
+  color: white;
+  font-family: "BancoDoBrasil-Bold";
+  background-color: #a602a0;
+}
+
+#crie-button:hover {
+  border: 0.05em solid #a602a0;
+  color: #a602a0;
+  background-color: white;
+}
+
+.container h1 {
+  font-size: 3.5em;
+  font-family: "BancoDoBrasil-Bold";
+}
+
+.desc {
+  padding-top: 0.5em;
+}
+
+.desc h2 {
+  color: #a602a0;
+}
+
+.card-image {
+  display: flex;
+}
+
+#photo1 {
+  z-index: 1;
+  animation: myAnim 3s ease 0s infinite alternate forwards;
+  filter: drop-shadow(1px 1px 25px rgba(0, 0, 0, 0.2078431373));
+}
+
+#photo2 {
+  z-index: 1;
+  position: absolute;
+  top: 15em;
+  right: 30vw;
+  animation: myAnim 2.8s ease 0s infinite alternate forwards;
+  filter: drop-shadow(1px 60px 45px rgba(0, 0, 0, 0.1607843137));
+}
+
+#cell {
+  z-index: 0;
+  background-color: rgb(249, 249, 249);
+}
+
+.cell {
+  padding: 5vw;
+}
+
+.cell img {
+  width: 20em;
+  z-index: 0;
+}
+
+.icons {
+  z-index: 11;
+}
+
+.icons i {
+  position: absolute;
+  animation: myAnimIcon 2.8s ease 0s infinite alternate forwards;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  color: #a602a0;
+  background-color: rgb(255, 255, 255);
+  width: 1.3em;
+  height: 1.3em;
+  box-shadow: 0px 0px 57px 1px rgba(0, 0, 0, 0.37);
+  border-radius: 0.2em;
+}
+
+#icon2 {
+  margin-left: 16vw;
+  margin-top: 22vw;
+}
+
+.textos {
+  display: flex;
+  padding-top: 0.3em;
+  flex-direction: column;
+  gap: 3em;
+}
+
+h2 {
+  font-family: "BancoDoBrasil-Bold";
+  font-size: 2em;
+}
+
+.motivos {
+  display: flex;
+  flex-direction: column;
+  gap: 4em;
+}
+
+.motivo {
+  text-align: start;
+  display: flex;
+  align-items: center;
+  gap: 2em;
+}
+
+.motivo i {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  color: #a602a0;
+  background-color: white;
+  width: 1.6em;
+  height: 1.6em;
+  border-radius: 0.2em;
+  box-shadow: 0px 0px 57px 1px rgba(0, 0, 0, 0.2);
+}
+
+#footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 6em;
+  gap: 5em;
+  background-color: rgb(249, 249, 249);
+}
+
+#footer i {
+  color: black;
+  padding-top: 1em;
+}
+
+.social-links {
+  display: flex;
+  justify-items: center;
+  justify-content: center;
+  gap: 1em;
+}
+
+.box-vantagens {
+  text-align: center;
+}
+
+.vantagens {
+  display: flex;
+  padding-top: 2em;
+  gap: 2em;
+}
+
+.vantagem {
+  transition: 0.5s;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  justify-content: center;
+  padding: 1em;
+  background-color: #a602a0;
+  border-radius: 0.5em;
+  width: 17em;
+  box-shadow: 0px 0px 57px 1px rgba(0, 0, 0, 0.2);
+}
+
+.vantagem:hover {
+  transform: scale(1.1);
+}
+
+#depoimentos {
+  background-color: rgb(250, 250, 250);
+}
+
+.box-depoimentos {
+  text-align: center;
+}
+
+.depoimentos {
+  display: flex;
+  gap: 3em;
+  margin-bottom: 3em;
+}
+
+.depoimento {
+  transition: 0.5s;
+  color: #a602a0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5em;
+  margin-top: 2em;
+  padding: 1em;
+  width: 17em;
+  border-radius: 1em;
+}
+
+.depoimento:hover {
+  transform: scale(1.1);
+}
+
+.app {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-bottom: 3em;
+}
+
+.img-app {
+  display: flex;
+  flex-direction: row;
+}
+
+.img-app img {
+  width: 70%;
+  z-index: 0;
+}
+
+.icon-app img {
+  position: absolute;
+  z-index: 1;
+  animation: myAnimIcon 2.8s ease 0s infinite alternate forwards;
+  width: 10%;
+  top: 50%;
+  left: 5%;
+  border-radius: 1.8em;
+  box-shadow: 0px 0px 57px 1px rgba(0, 0, 0, 0.2);
+}
+
+#icon1 {
+  z-index: -1;
+  top: 20%;
+  left: 24%;
+}
+
+.text {
+  display: flex;
+  flex-direction: column;
+  gap: 2em;
+}
+
+.download-itens {
+  display: flex;
+  gap: 1em;
+}
+
+.download {
+  display: flex;
+  align-items: center;
+  gap: 1em;
+  color: white;
+  background-color: #a602a0;
+  padding: 1em;
+  width: 12.5em;
+  border-radius: 0.2em;
+  transition: 0.8s;
+  cursor: pointer;
+}
+
+.download:hover {
+  transform: scale(1.1);
+}
+
+@keyframes myAnim {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-100px);
+  }
+}
+@keyframes myAnimIcon {
+  0% {
+    transform: translateY(10px);
+  }
+  100% {
+    transform: translateY(-20px);
+  }
+}
+@keyframes navBar {
+  0% {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(-1px);
+  }
+}
+@media screen and (max-width: 900px) {
+  a {
+    color: white;
+  }
+  .dark-button {
+    color: white;
+  }
+  .header {
+    background-color: #a602a0;
+    position: fixed;
+    width: 100%;
+    z-index: 99;
+    top: 0;
+  }
+  .nav-bar {
+    padding: 1em;
+    height: 3.3em;
+  }
+  .dark-mode .dark-button {
+    color: black;
+  }
+  .dark-mode .logo {
+    color: black;
+  }
+  .dark-mode #bars {
+    color: black;
+  }
+  .dark-mode .mobile-menu ul li a {
+    color: black;
+  }
+  #bars {
+    color: white;
+  }
+  .logo {
+    color: white;
+  }
+  .card-image {
+    display: none;
+  }
+  .open {
+    display: block;
+    animation: navBar 0.5s ease 0s 1 normal forwards;
+  }
+  .nav-list {
+    display: none;
+  }
+  .nav-buttom {
+    display: none;
+  }
+  .mobile-menu-icon {
+    display: flex;
+  }
+  .mobile-menu {
+    position: fixed;
+  }
+  .mobile-menu-icon button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+  }
+  .mobile-menu ul {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    font-size: 1.5em;
+    margin-top: 1em;
+    gap: 4em;
+  }
+  .cell {
+    display: none;
+  }
+  .help {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+  }
+  .motivo {
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+  }
+  .vantagens {
+    flex-direction: column;
+    align-items: center;
+  }
+  .depoimentos {
+    flex-direction: column;
+  }
+  .app {
+    flex-direction: column;
+  }
+  .img-app {
+    margin-left: 3em;
+    margin-bottom: 1em;
+  }
+  .icon-app {
+    width: 2em;
+  }
+  #icon1 {
+    left: 64%;
+  }
+  .icon-app img {
+    top: 30%;
+    left: 20%;
+  }
+  .download-itens {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+@media screen and (max-width: 520px) {
+  .container {
+    padding: 2em;
+    text-align: center;
+  }
+}/*# sourceMappingURL=styles.css.map */
